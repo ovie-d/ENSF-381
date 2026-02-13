@@ -9,13 +9,45 @@
 <body>
     <h1>JavaScript Lab Exercise 2</h1>
     <script>
-        function add(firstNumber, secondNumber) {
+        // function add(firstNumber, secondNumber) {
+        //     return firstNumber + secondNumber;
+        // }
+
+        // function subtract(firstNumber, secondNumber) {
+        //     return firstNumber - secondNumber;
+        // }
+
+        //function add(firstNumber, secondNumber = 5) {
+            //return firstNumber + secondNumber;
+        //}
+
+        //function subtract(firstNumber, secondNumber = 5) {
+          //  return firstNumber - secondNumber;
+        //}
+        
+        const add = (firstNumber, secondNumber) => {
             return firstNumber + secondNumber;
         }
 
-        function subtract(firstNumber, secondNumber) {
+        const subtract = (firstNumber, secondNumber) => {
             return firstNumber - secondNumber;
         }
+
+        const Multiply = (firstNumber, secondNumber) => {
+            return firstNumber * secondNumber;
+        }
+
+        const Divide = (firstNumber, secondNumber) => {
+            if (secondNumber == 0) {
+                return "Error: Division by zero is not allowed.";
+            }
+            return firstNumber / secondNumber;
+        }
+
+        function calculator(num1, num2, operation) {
+            return operation(num1, num2);
+        }
+
         
     </script>
 </body>
