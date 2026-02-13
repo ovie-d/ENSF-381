@@ -1,0 +1,88 @@
+<!DOCTYPE html> <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Lab3 -- Exercise 1</title>
+</head>
+<body>
+<h1>JavaScript Lab Exercise 1</h1> <script>
+// Write your JavaScript code here
+// 1a
+
+var a = 10;
+let b = 20;
+const c = 30;
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+b = 50;
+console.log(b);
+
+try {
+    c = 100;
+} catch (error) {
+    console.log("Error: cannot reassign const");
+}
+
+//1b
+
+let string1 = "Hello, World!";
+let string2 = "JavaScript is fun!";
+
+console.log(string1.length);
+
+let string_cat = string1 + ' ' + string2;
+console.log(string_cat);
+
+let string3 = string2.replace("fun", "awesome");
+console.log(string3);
+
+//1c
+
+let name = "Alice";
+let age = 25;
+let result = `My name is ${name} and I am ${age} years old`;
+console.log(result);
+
+//1d
+
+const students = ["Alice", "Tom", "Charlie"];
+const ages = [19, 21, 20];
+for (let i = 0; i < students.length; i++) {
+    let studentInfo = `My name is ${students[i]} and I am ${ages[i]} years old`;
+    console.log(studentInfo);
+}
+
+//1e
+
+let currentDate = new Date();
+
+console.log(currentDate.toLocaleDateString("en-CA"));
+console.log(currentDate.toLocaleDateString("en-US"));
+
+let year = currentDate.getFullYear();
+let month = currentDate.getMonth();
+let weekday = currentDate.toLocaleDateString("en-US", { weekday: "long" });
+
+console.log(year);
+console.log(month);
+console.log(weekday);
+
+let season;
+
+if (month === 11 || month === 0 || month === 1) {
+    season = "Winter";
+} else if (month === 2 || month === 3 || month === 4) {
+    season = "Spring";
+} else if (month === 5 || month === 6 || month === 7) {
+    season = "Summer";
+} else {
+    season = "Fall";
+}
+
+console.log(season);
+
+
+</script> </body>
+</html>
