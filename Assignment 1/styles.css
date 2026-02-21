@@ -102,3 +102,68 @@ footer {
 
     
 }
+
+
+main form {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+input[type="text"],
+input[type="password"] {
+    background-color: #fff8ee;
+}
+
+
+.order-btn {
+    background-color: #f28c8c;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background-color: #c94c4c;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 12px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+
+select {
+    background-color: #fff8ee;
+    border-radius: 10px;
+    padding: 6px 10px;
+    border: 2px solid #e4b48c;
+    display: block;
+    margin: 20px auto;
+}
+
+
+.tile {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: inline-block;
+    width: 28%;
+    text-align: center;
+    vertical-align: top;
+}
+
+section {
+    text-align: center; 
+}
+
+.tiles-container {
+    text-align: center;
+}
