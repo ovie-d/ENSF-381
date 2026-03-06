@@ -1,3 +1,8 @@
+import "./App.css";
+import Controls from "./Controls";
+import UserList from "./UserList";
+import Footer from "./Footer";
+
 import './App.css';
 
 function App() {
