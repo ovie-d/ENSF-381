@@ -22,9 +22,12 @@
     </nav>
 </div>
 
+
 <main>
 
     <h1>Customize Order</h1>
+
+    <h2>Order time left: <span id="timer">10:00</span></h2>
 
     <img src="Picture2.jpeg" alt="Banner" width="400"><br><br>
 
@@ -32,20 +35,30 @@
 
         <h2>Vanilla Dream</h2>
 
-        <input type="radio" name="type"> Cup<br>
-        <input type="radio" name="type"> Cone<br><br>
+        <div class="option-box">
+            <h3>Ice Cream Type</h3>
 
-        <button class="order-btn" type="button">Submit Selection</button>
+            <input type="radio" name="type"> Cup<br>
+            <input type="radio" name="type"> Cone
+        </div>
 
-        <br><br><br>
+        <br><br>
 
         <h2>Chocolate Bliss</h2>
 
-        <input type="checkbox"> Sprinkles<br>
-        <input type="checkbox"> Caramel<br>
-        <input type="checkbox"> Nuts<br><br>
+        <div class="option-box">
+            <h3>Toppings</h3>
 
-        <button class="order-btn" type="button">Submit Selection</button>
+            <input type="checkbox" name="topping"> Sprinkles<br>
+            <input type="checkbox" name="topping"> Caramel<br>
+            <input type="checkbox" name="topping"> Nuts
+        </div>
+
+        <br><br>
+
+        <p id="total-price">Total Price: $0.00</p>
+
+        <button class="order-btn" type="button" onclick="calculatePrice()">Submit Order</button>
 
         <br><br>
 
@@ -55,9 +68,12 @@
 
 </main>
 
+
 <footer>
     <p>&copy; 2026 Sweet Scoop Ice Cream</p>
 </footer>
+
+<script src="customize.js"></script>
 
 </body>
 </html>
