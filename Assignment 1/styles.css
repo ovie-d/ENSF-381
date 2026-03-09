@@ -162,6 +162,27 @@ select {
     vertical-align: top;
 }
 
+.tile:hover{
+background-color:#ffffff;
+}
+
+#cart-items p{
+    border: 2px solid #e4b48c;
+    border-radius: 12px;
+    padding: 10px 15px;
+    margin: 10px auto;
+    width: 250px;
+    background-color: #ffffff;
+}
+
+.option-box{
+    border: 2px solid #e4b48c;
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #fff8ee;
+    display: inline-block;
+}
+
 section {
     text-align: center; 
 }
