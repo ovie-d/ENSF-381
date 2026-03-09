@@ -99,28 +99,35 @@
             <h3>Pumpkin Spice</h3>
             <img src="Picture1.webp" alt="Ice Cream" width="150">
             <p>$6</p>
-            <button class="order-btn">Add</button>
-            <button class="remove-btn">Remove</button>
+            <button class="order-btn" onclick="addToCart('Pumpkin Spice',6)">Add</button>
+            <button class="remove-btn" onclick="removeFromCart('Pumpkin Spice')">Remove</button>
         </div>
 
         <div class="tile">
             <h3>Peppermint Snow</h3>
             <img src="Picture1.webp" alt="Ice Cream" width="150">
             <p>$6</p>
-            <button class="order-btn">Add</button>
-            <button class="remove-btn">Remove</button>
+            <button class="order-btn" onclick="addToCart('Peppermint Snow',6)">Add</button>
+            <button class="remove-btn" onclick="removeFromCart('Peppermint Snow')">Remove</button>
         </div>
 
         <div class="tile">
             <h3>Mango Breeze</h3>
             <img src="Picture1.webp" alt="Ice Cream" width="150">
             <p>$6</p>
-            <button class="order-btn">Add</button>
-            <button class="remove-btn">Remove</button>
+            <button class="order-btn" onclick="addToCart('Mango Breeze',6)">Add</button>
+            <button class="remove-btn" onclick="removeFromCart('Mango Breeze')">Remove</button>
         </div>
 
         </div>
 
+    </section>
+
+    <section>
+    <h2>Cart</h2>
+    <div id="cart-items">
+        <p>No items in cart.</p>
+    </div>
     </section>
 
 </main>
@@ -128,6 +135,8 @@
 <footer>
     <p>&copy; 2026 Sweet Scoop Ice Cream</p>
 </footer>
+
+<script src="menu.js"></script>
 
 </body>
 </html>

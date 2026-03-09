@@ -1,2 +1,6 @@
 .zip
 .DS_Store
+.node_modules
+*.zip
+lab-04/Lab-04(Group33).zip
+node-v24.14.0.pkg
