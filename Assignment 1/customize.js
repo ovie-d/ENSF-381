@@ -1,8 +1,7 @@
-let time = 600;
-
 function startTimer() {
 
     const timer = document.getElementById("timer");
+    let time = Number(timer.dataset.duration);
 
     setInterval(function () {
 
@@ -42,7 +41,7 @@ function calculatePrice() {
         return;
     }
 
-    let total = 6 + toppings.length * 1.5;
+    let total = 6 + (toppings.length * 1.5);
 
     document.getElementById("total-price").textContent =
         "Total Price: $" + total.toFixed(2);

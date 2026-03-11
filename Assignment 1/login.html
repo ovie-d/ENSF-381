@@ -26,19 +26,27 @@
 
     <h1>Welcome back!</h1>
 
-    <form>
+   <section>
+
+     <form id ="loginForm" onsubmit="handleLogin(event)">
         Username:<br>
-        <input type="text"><br><br>
+        <input type="text" id="email"><br><br>
 
         Password:<br>
-        <input type="password"><br><br>
+        <input type="password" id ="password"><br><br>
 
         <input type="checkbox"> Forgot Password<br><br>
 
         <a href="menu_view.html" class="order-btn">Login</a>
-    </form>
+        <br><br>
+        New User ?
+        <a href ="signup.html" class = "order-btn">Create an account</a>
 
+    </form>
+    </section>
 </main>
+
+<script src="login.js"></script>
 
 <footer>
     <p>&copy; 2026 Sweet Scoop Ice Cream</p>

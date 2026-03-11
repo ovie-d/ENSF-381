@@ -151,7 +151,7 @@ select {
 
 
 .tile {
-    background-color: #ffffff;
+    background-color: #fff8ee;
     border: 20px;
     border-radius: 20px;
     padding: 15px;
@@ -163,7 +163,7 @@ select {
 }
 
 .tile:hover{
-background-color:#ffffff;
+    background-color: #ffffff;
 }
 
 #cart-items p{
@@ -189,4 +189,44 @@ section {
 
 .tiles-container {
     text-align: center;
+}
+
+.signup-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.signup-button:hover {
+    background-color: #45A049;
+    opacity: 1;
+}
+
+.message-box {
+    display: none;
+    width: min(560px, 90%);
+    margin: 10px auto 20px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    text-align: left;
+}
+
+.message-box.error {
+    display: block;
+    background-color: #fde8e8;
+    color: #8c1d1d;
+    border-color: #efb3b3;
+}
+
+.message-box.success {
+    display: block;
+    background-color: #e8f9ec;
+    color: #1f6f2e;
+    border-color: #b8e3c0;
 }
