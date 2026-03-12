@@ -28,21 +28,23 @@
 
    <section>
 
-     <form id ="loginForm" onsubmit="handleLogin(event)">
+     <form id ="loginForm">
         Username:<br>
-        <input type="text" id="email"><br><br>
+        <input type="text" id="username"><br><br>
 
         Password:<br>
         <input type="password" id ="password"><br><br>
 
         <input type="checkbox"> Forgot Password<br><br>
 
-        <a href="menu_view.html" class="order-btn">Login</a>
+        <input type="submit" value="Login" class="order-btn">
         <br><br>
         New User ?
         <a href ="signup.html" class = "order-btn">Create an account</a>
 
     </form>
+
+     <div id="login-message-box" class="dynamic-box" aria-live="polite"></div>
     </section>
 </main>
 
