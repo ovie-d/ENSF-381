@@ -58,34 +58,70 @@ users = deepcopy(SEEDED_USERS)
 #   Exercise2
 # - POST /predict_house_price
 
-@app.route("/users", methods=["GET"])
+
+@app.route('/users', methods=['GET'])  
 def get_users():
     return jsonify(list(users.values())), 200
 
-@app.route("/users/<user_id>", methods=["PUT"])
+
+@app.route('/users', methods=['POST'])
+def create_user():
+    data  = request.json 
+
+    if not data or 'id' not in data or 'first_name' not in data or 'user_group' not in data: 
+        return jsonify({"message": "Missing required fields."}), 400
+
+    user_id = data['id']
+
+    if user_id in users:
+        return jsonify({"message": f"User {user_id} already exists."}), 409 
+
+    users[user_id] = {
+        "id": user_id,
+        "first_name":  data['first_name'],
+        "user_group": data['user_group']
+    }
+
+    return jsonify({
+        "id": user_id,
+        "first_name": data['first_name'],
+        "user_group": data['user_group'],
+        "message": f"Created user {user_id}."
+    }), 201 
+
+
+@app.route('/users/<user_id>', methods=['PUT'])
 def update_user(user_id):
     if user_id not in users:
-        return jsonify({"error": "User not found"}), 409
-    data = request.get_json()
-    if not data:
-        return jsonify({"error": "Invalid input"}), 400
-    users[user_id] = data
-    return jsonify(data), 201
+        return jsonify({"message": f"User {user_id} was not found."}), 404
 
-@app.route("/users/<user_id>", methods=["PUT"])
-def update_user(user_id):
-    if user_id not in users:
-        return jsonify({"error": "User not found"}), 404
-    data = request.get_json()
-    users[user_id] = data
-    return jsonify(data), 200
+    data = request.json
 
-@app.route("/users/<user_id>", methods=["DELETE"])
-def delete_user(user_id):
-    if user_id not in users:
-        return jsonify({"error": "User not found"}), 404
+    if not data or 'first_name' not in data or 'user_group' not in data:
+        return jsonify({"message": "Invalid request body."}), 400 
+
+    users[user_id] = {
+        "id": user_id,
+        "first_name": data['first_name'],
+        "user_group": data['user_group']
+    }
+
+    return jsonify({
+        "id": user_id,
+        "first_name": data['first_name'],
+        "user_group": data['user_group'],
+        "message": f"Updated user {user_id}." 
+    }), 200
+
+
+@app.route('/users/<user_id>', methods=['DELETE'])
+def delete_user(user_id): 
+    if user_id not in users: 
+        return jsonify({"message": f"User {user_id} was not found."}), 404
+
     del users[user_id]
-    return jsonify({"message": "User deleted"}), 200
+
+    return jsonify({"message": f"Deleted user {user_id}."}), 200
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5050)
+    app.run(debug=True, port=5050) 
