@@ -1,3 +1,8 @@
+// Group Members:
+// David Onofeghara -30214188
+// Unas Khalid (30141707)
+
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
