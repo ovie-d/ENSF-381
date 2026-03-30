@@ -1,10 +1,18 @@
 import { useEffect, useState } from 'react';
-import flavors from '../flavors';
-import reviews from '../reviews';
+import flavors from '../data/flavors';
+import reviews from '../data/reviews';
 
-function pickRandomItems(items, count) {
-  const shuffled = [...items].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, count);
+function getRandomItems(list, amount) {
+  const copiedList = [...list];
+
+  for (let i = copiedList.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = copiedList[i];
+    copiedList[i] = copiedList[j];
+    copiedList[j] = temp;
+  }
+
+  return copiedList.slice(0, amount);
 }
 
 function renderStars(rating) {
@@ -17,8 +25,8 @@ function MainSection() {
   const [featuredReviews, setFeaturedReviews] = useState([]);
 
   useEffect(() => {
-    setFeaturedFlavors(pickRandomItems(flavors, 3));
-    setFeaturedReviews(pickRandomItems(reviews, 2));
+    setFeaturedFlavors(getRandomItems(flavors, 3));
+    setFeaturedReviews(getRandomItems(reviews, 2));
   }, []);
 
   return (
